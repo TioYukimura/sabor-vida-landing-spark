@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 const Reservations = () => {
   useEffect(() => {
-    const phoneNumber = "5547984563817"; // Número atualizado
+    const phoneNumber = "5511987654321"; // Substitua pelo seu número de WhatsApp
     const message = "Olá! Gostaria de fazer uma reserva no Sabor e Vida.";
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     
