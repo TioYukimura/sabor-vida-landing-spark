@@ -54,6 +54,10 @@ const Index = () => {
     }
   ];
 
+  const openWhatsApp = () => {
+    window.open('https://wa.me/5547984563817?text=Olá! Gostaria de fazer uma reserva no Sabor e Vida.', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header Navigation */}
@@ -63,7 +67,7 @@ const Index = () => {
           <nav className="hidden md:flex space-x-8">
             <a href="#menu" className="text-foreground/80 hover:text-primary transition-colors">Menu</a>
             <a href="#about" className="text-foreground/80 hover:text-primary transition-colors">Sobre</a>
-            <a href="#reservas" className="text-foreground/80 hover:text-primary transition-colors">Reservas</a>
+            <a href="#reservas" onClick={openWhatsApp} className="text-foreground/80 hover:text-primary transition-colors cursor-pointer">Reservas</a>
             <a href="#contato" className="text-foreground/80 hover:text-primary transition-colors">Contato</a>
           </nav>
         </div>
@@ -86,10 +90,7 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              className="btn-hero text-xl px-12 py-6"
-              onClick={() => window.open('https://wa.me/5547984563817?text=Olá! Gostaria de fazer uma reserva no Sabor e Vida.', '_blank')}
-            >
+            <Button className="btn-hero text-xl px-12 py-6" onClick={openWhatsApp}>
               Reserve sua Mesa
             </Button>
             <Button 
@@ -110,7 +111,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-6">
+      <section id="about" className="py-20 px-6">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -140,7 +141,7 @@ const Index = () => {
       </section>
 
       {/* Menu Highlights */}
-      <section className="py-20 px-6 bg-card/30">
+      <section id="menu" className="py-20 px-6 bg-card/30">
         <div className="container mx-auto">
           <h2 className="section-title gradient-text">Sabores que Falam por Si</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -178,10 +179,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6">
                   Cortes selecionados, acompanhamentos e sobremesa
                 </p>
-                <Button 
-                  className="btn-secondary w-full"
-                  onClick={() => window.open('https://wa.me/5547984563817?text=Olá! Gostaria de contratar o Rodízio Tradicional (R$ 89,90).', '_blank')}
-                >
+                <Button className="btn-secondary w-full" onClick={openWhatsApp}>
                   Escolher Plano
                 </Button>
               </CardContent>
@@ -197,10 +195,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6">
                   Cortes especiais, acompanhamentos gourmet e sobremesa premium
                 </p>
-                <Button 
-                  className="btn-hero w-full"
-                  onClick={() => window.open('https://wa.me/5547984563817?text=Olá! Gostaria de contratar o Rodízio Premium (R$ 129,90).', '_blank')}
-                >
+                <Button className="btn-hero w-full" onClick={openWhatsApp}>
                   Escolher Plano
                 </Button>
               </CardContent>
@@ -241,7 +236,7 @@ const Index = () => {
       </section>
 
       {/* Reservation CTA */}
-      <section className="py-20 px-6" style={{ background: 'var(--gradient-primary)' }}>
+      <section id="reservas" className="py-20 px-6" style={{ background: 'var(--gradient-primary)' }}>
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-black text-primary-foreground mb-6">
             Reserve sua Mesa e Viva o Melhor do Churrasco!
@@ -249,17 +244,14 @@ const Index = () => {
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Não perca a oportunidade de viver uma experiência gastronômica única
           </p>
-          <Button 
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-xl px-12 py-6 font-bold"
-            onClick={() => window.open('https://wa.me/5547984563817?text=Olá! Gostaria de fazer uma reserva no Sabor e Vida.', '_blank')}
-          >
+          <Button className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-xl px-12 py-6 font-bold" onClick={openWhatsApp}>
             Reservar Agora
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-secondary py-16 px-6">
+      <footer id="contato" className="bg-secondary py-16 px-6">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             {/* Logo & Slogan */}
@@ -275,7 +267,7 @@ const Index = () => {
                 <Button size="sm" className="bg-primary/20 hover:bg-primary">
                   <Facebook className="w-5 h-5" />
                 </Button>
-                <Button size="sm" className="bg-primary/20 hover:bg-primary">
+                <Button size="sm" className="bg-primary/20 hover:bg-primary" onClick={openWhatsApp}>
                   <MessageCircle className="w-5 h-5" />
                 </Button>
               </div>
@@ -287,7 +279,7 @@ const Index = () => {
               <ul className="space-y-3">
                 <li><a href="#home" className="text-muted-foreground hover:text-primary transition-colors">Home</a></li>
                 <li><a href="#menu" className="text-muted-foreground hover:text-primary transition-colors">Menu</a></li>
-                <li><a href="#reservas" className="text-muted-foreground hover:text-primary transition-colors">Reservas</a></li>
+                <li><a href="#reservas" onClick={openWhatsApp} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Reservas</a></li>
                 <li><a href="#contato" className="text-muted-foreground hover:text-primary transition-colors">Contato</a></li>
               </ul>
             </div>
@@ -302,7 +294,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-muted-foreground">(11) 98765-4321</span>
+                  <a href="https://wa.me/5547984563817?text=Olá! Gostaria de fazer uma reserva no Sabor e Vida." target="_blank" className="text-muted-foreground hover:text-primary transition-colors">(11) 98765-4321</a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-5 h-5 text-primary flex-shrink-0" />
@@ -322,10 +314,7 @@ const Index = () => {
 
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-8 right-8 z-50">
-        <Button 
-          className="btn-hero w-16 h-16 rounded-full shadow-2xl float-animation"
-          onClick={() => window.open('https://wa.me/5547984563817?text=Olá! Gostaria de fazer uma reserva no Sabor e Vida.', '_blank')}
-        >
+        <Button className="btn-hero w-16 h-16 rounded-full shadow-2xl float-animation" onClick={openWhatsApp}>
           <MessageCircle className="w-6 h-6" />
         </Button>
       </div>
