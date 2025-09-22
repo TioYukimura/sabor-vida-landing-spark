@@ -189,7 +189,7 @@ const Menu = () => {
             <Button 
               size="lg" 
               className="text-lg px-8 py-4 shadow-button hover:shadow-lg transition-all"
-              onClick={() => navigate('/')}
+              onClick={() => navigate('/reservas')}
             >
               Reservar Mesa
             </Button>
