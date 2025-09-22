@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star, MapPin, Phone, Clock, Instagram, Facebook, MessageCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Logo from '@/components/Logo';
 import heroImage from '@/assets/hero-churrasco.jpg';
 import restaurantAmbiance from '@/assets/restaurant-ambiance.jpg';
@@ -10,6 +11,7 @@ import costelaImage from '@/assets/costela-suina.jpg';
 import fraldinhaImage from '@/assets/fraldinha.jpg';
 
 const Index = () => {
+  const navigate = useNavigate();
   const menuItems = [
     {
       name: "Picanha Premium",
@@ -87,7 +89,10 @@ const Index = () => {
             <Button className="btn-hero text-xl px-12 py-6">
               Reserve sua Mesa
             </Button>
-            <Button className="btn-secondary text-xl px-12 py-6">
+            <Button 
+              className="btn-secondary text-xl px-12 py-6"
+              onClick={() => navigate('/menu')}
+            >
               Ver Cardápio
             </Button>
           </div>
