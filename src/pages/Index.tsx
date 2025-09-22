@@ -86,7 +86,10 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button className="btn-hero text-xl px-12 py-6">
+            <Button 
+              className="btn-hero text-xl px-12 py-6"
+              onClick={() => window.open('https://wa.me/5547984563817?text=Olá! Gostaria de fazer uma reserva no Sabor e Vida.', '_blank')}
+            >
               Reserve sua Mesa
             </Button>
             <Button 
@@ -175,7 +178,10 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6">
                   Cortes selecionados, acompanhamentos e sobremesa
                 </p>
-                <Button className="btn-secondary w-full">
+                <Button 
+                  className="btn-secondary w-full"
+                  onClick={() => window.open('https://wa.me/5547984563817?text=Olá! Gostaria de contratar o Rodízio Tradicional (R$ 89,90).', '_blank')}
+                >
                   Escolher Plano
                 </Button>
               </CardContent>
@@ -191,7 +197,10 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6">
                   Cortes especiais, acompanhamentos gourmet e sobremesa premium
                 </p>
-                <Button className="btn-hero w-full">
+                <Button 
+                  className="btn-hero w-full"
+                  onClick={() => window.open('https://wa.me/5547984563817?text=Olá! Gostaria de contratar o Rodízio Premium (R$ 129,90).', '_blank')}
+                >
                   Escolher Plano
                 </Button>
               </CardContent>
@@ -240,7 +249,10 @@ const Index = () => {
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Não perca a oportunidade de viver uma experiência gastronômica única
           </p>
-          <Button className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-xl px-12 py-6 font-bold">
+          <Button 
+            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-xl px-12 py-6 font-bold"
+            onClick={() => window.open('https://wa.me/5547984563817?text=Olá! Gostaria de fazer uma reserva no Sabor e Vida.', '_blank')}
+          >
             Reservar Agora
           </Button>
         </div>
@@ -310,7 +322,10 @@ const Index = () => {
 
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-8 right-8 z-50">
-        <Button className="btn-hero w-16 h-16 rounded-full shadow-2xl float-animation">
+        <Button 
+          className="btn-hero w-16 h-16 rounded-full shadow-2xl float-animation"
+          onClick={() => window.open('https://wa.me/5547984563817?text=Olá! Gostaria de fazer uma reserva no Sabor e Vida.', '_blank')}
+        >
           <MessageCircle className="w-6 h-6" />
         </Button>
       </div>
