@@ -63,7 +63,7 @@ const Index = () => {
           <nav className="hidden md:flex space-x-8">
             <a href="#menu" className="text-foreground/80 hover:text-primary transition-colors">Menu</a>
             <a href="#about" className="text-foreground/80 hover:text-primary transition-colors">Sobre</a>
-            <a href="/reservas" className="text-foreground/80 hover:text-primary transition-colors">Reservas</a>
+            <a href="#reservas" className="text-foreground/80 hover:text-primary transition-colors">Reservas</a>
             <a href="#contato" className="text-foreground/80 hover:text-primary transition-colors">Contato</a>
           </nav>
         </div>
@@ -86,7 +86,7 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button className="btn-hero text-xl px-12 py-6" onClick={() => navigate('/reservas')}>
+            <Button className="btn-hero text-xl px-12 py-6">
               Reserve sua Mesa
             </Button>
             <Button 
@@ -175,7 +175,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6">
                   Cortes selecionados, acompanhamentos e sobremesa
                 </p>
-                <Button className="btn-secondary w-full" onClick={() => navigate('/reservas')}>
+                <Button className="btn-secondary w-full">
                   Escolher Plano
                 </Button>
               </CardContent>
@@ -191,7 +191,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6">
                   Cortes especiais, acompanhamentos gourmet e sobremesa premium
                 </p>
-                <Button className="btn-hero w-full" onClick={() => navigate('/reservas')}>
+                <Button className="btn-hero w-full">
                   Escolher Plano
                 </Button>
               </CardContent>
@@ -232,7 +232,7 @@ const Index = () => {
       </section>
 
       {/* Reservation CTA */}
-      <section id="reservas" className="py-20 px-6" style={{ background: 'var(--gradient-primary)' }}>
+      <section className="py-20 px-6" style={{ background: 'var(--gradient-primary)' }}>
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-black text-primary-foreground mb-6">
             Reserve sua Mesa e Viva o Melhor do Churrasco!
@@ -240,14 +240,14 @@ const Index = () => {
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Não perca a oportunidade de viver uma experiência gastronômica única
           </p>
-          <Button className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-xl px-12 py-6 font-bold" onClick={() => navigate('/reservas')}>
+          <Button className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-xl px-12 py-6 font-bold">
             Reservar Agora
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer id="contato" className="bg-secondary py-16 px-6">
+      <footer className="bg-secondary py-16 px-6">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             {/* Logo & Slogan */}
@@ -275,7 +275,7 @@ const Index = () => {
               <ul className="space-y-3">
                 <li><a href="#home" className="text-muted-foreground hover:text-primary transition-colors">Home</a></li>
                 <li><a href="#menu" className="text-muted-foreground hover:text-primary transition-colors">Menu</a></li>
-                <li><a href="/reservas" className="text-muted-foreground hover:text-primary transition-colors">Reservas</a></li>
+                <li><a href="#reservas" className="text-muted-foreground hover:text-primary transition-colors">Reservas</a></li>
                 <li><a href="#contato" className="text-muted-foreground hover:text-primary transition-colors">Contato</a></li>
               </ul>
             </div>
@@ -310,7 +310,7 @@ const Index = () => {
 
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-8 right-8 z-50">
-        <Button className="btn-hero w-16 h-16 rounded-full shadow-2xl float-animation" onClick={() => navigate('/reservas')}>
+        <Button className="btn-hero w-16 h-16 rounded-full shadow-2xl float-animation">
           <MessageCircle className="w-6 h-6" />
         </Button>
       </div>
