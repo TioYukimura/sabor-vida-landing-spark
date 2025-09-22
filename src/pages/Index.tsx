@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star, MapPin, Phone, Clock, Instagram, Facebook, MessageCircle } from 'lucide-react';
+import Logo from '@/components/Logo';
 import heroImage from '@/assets/hero-churrasco.jpg';
 import restaurantAmbiance from '@/assets/restaurant-ambiance.jpg';
 import picanhaImage from '@/assets/picanha-premium.jpg';
@@ -53,6 +54,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Header Navigation */}
+      <header className="absolute top-0 left-0 right-0 z-50 p-6">
+        <div className="container mx-auto flex justify-between items-center">
+          <Logo />
+          <nav className="hidden md:flex space-x-8">
+            <a href="#menu" className="text-foreground/80 hover:text-primary transition-colors">Menu</a>
+            <a href="#about" className="text-foreground/80 hover:text-primary transition-colors">Sobre</a>
+            <a href="#reservas" className="text-foreground/80 hover:text-primary transition-colors">Reservas</a>
+            <a href="#contato" className="text-foreground/80 hover:text-primary transition-colors">Contato</a>
+          </nav>
+        </div>
+      </header>
+
       {/* Hero Section */}
       <section className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
         <img 
@@ -61,14 +75,6 @@ const Index = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="hero-content container mx-auto px-6 text-center">
-          {/* Logo */}
-          <div className="mb-8 flex-col items-center justify-center">
-            <div className="text-6xl md:text-8xl font-black gradient-text mb-4">
-              Sabor e Vida
-            </div>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
-          </div>
-          
           <h1 className="hero-title mb-6">
             O Verdadeiro Sabor da Vida em Cada Corte
           </h1>
